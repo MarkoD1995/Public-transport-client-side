@@ -3,13 +3,14 @@
     <h1 class="mt-4 text-center">Transport Guide</h1>
     <form @submit.prevent="calculateJourney">
       <div class="form-group">
-        <label for="user">What is you startint point?</label>
+        <label for="user">What is you starting point?</label>
         <input
           id="startPoint"
           name="startPoint"
           type="text"
           placeholder="Ex: Basel"
           v-model="startPoint"
+          style="width: 260px"
           class="form-control"
           v-on:keypress="isLetter($event)"
           required
@@ -22,6 +23,7 @@
           type="text"
           placeholder="Ex: Zurich"
           v-model="endPoint"
+          style="width: 260px"
           class="form-control"
           v-on:keypress="isLetter($event)"
           required
